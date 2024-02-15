@@ -36,49 +36,46 @@ const Create = () => {
   };
 
   return (
- 
-      
-
     <div className="container my-3">
-         <div className="card shadow-lg">
-          <div className="card-body  my-2">
-      <h1 className="h1 text-center mb-3 ">Sign Up</h1>
+      <div className="card shadow-lg">
+        <div className="card-body my-2">
+          <h1 className="h1 text-center mb-3">Sign Up</h1>
 
-      {error && <div className="alert alert-danger"> {error} </div>}
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="form-label">Name</label>
-          <input
-            type="text"
-            className="form-control"
-            value={fname}
-            onChange={(e) => setName(e.target.value)}
-          />
+          {error && <div className="alert alert-danger"> {error} </div>}
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                value={fname}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="form-label">Email address</label>
+              <input
+                type="email"
+                className="form-control"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="mb-5">
+              <label className="form-label">Age</label>
+              <input
+                type="number"
+                className="form-control"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+              />
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </form>
         </div>
-        <div className="mb-4">
-          <label className="form-label">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="mb-5">
-          <label className="form-label">Age</label>
-          <input
-            type="number"
-            className="form-control"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
       </div>
-    </div>
     </div>
   );
 };

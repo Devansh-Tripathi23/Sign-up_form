@@ -57,8 +57,6 @@ router.delete("/:id", async (req, res) => {
 //UPDATE
 router.patch("/edit/:id", async (req, res) => {
   const { id } = req.params;
-  console.log("get body", req.body);
-  console.log("get id", id);
   // const { name, email, age } = req.body;
   try {
     const updatedUser = await userData.findByIdAndUpdate(id, req.body, {

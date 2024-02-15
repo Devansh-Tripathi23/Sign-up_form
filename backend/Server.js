@@ -11,6 +11,7 @@ app.use(cors());
 // Routes Imported here
 const userDataRoute = require("./Routes/UserRoutes.js");
 
+
 app.get("/", (req, res) => {
   res.send("API running");
 });
